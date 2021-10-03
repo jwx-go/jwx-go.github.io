@@ -36,9 +36,9 @@ func _main() error {
 
   token, err := jwt.Parse(
     payload,
-    jwt.InferAlgorithm(true), # Allow guessing algorithm
-    jwt.WithKeySet(keyset),   # Use keyset to verify JWS
-    jwt.Validate(true),       # Validate JWT token itself
+    jwt.InferAlgorithm(true), // Allow guessing algorithm
+    jwt.WithKeySet(keyset),   // Use keyset to verify JWS
+    jwt.Validate(true),       // Validate JWT token itself
   )
   if err != nil {
     return fmt.Errorf(`failed to parse/verify/validate token: %w`, err)
