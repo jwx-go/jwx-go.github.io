@@ -17,17 +17,17 @@ import (
 )
 
 func main() {
-	if err := _main(); err != nil {
-		fmt.Fprintf(os.Stderr, "%s\n", err)
-		os.Exit(1)
+  if err := _main(); err != nil {
+    fmt.Fprintf(os.Stderr, "%s\n", err)
+    os.Exit(1)
   }
 }
 
 func _main() error {
-	keyset, err := jwk.ReadFile("/path/to/keyset.json")
-	if err != nil {
-		return fmt.Errorf(`failed to read JWKS from file: %w`, err)
-	}
+  keyset, err := jwk.ReadFile("/path/to/keyset.json")
+  if err != nil {
+    return fmt.Errorf(`failed to read JWKS from file: %w`, err)
+  }
 
   payload, err := os.ReadFile("/path/to/payload.txt")
   if err != nil {
