@@ -1,1 +1,6 @@
+title: JWX Toolkit for Go
 theme: jekyll-theme-dinky
+github:
+  repository_url: https://github.com/lestrrat-go/jwx
+  is_project_page: false
+  is_user_page: false
